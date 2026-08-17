@@ -1,0 +1,396 @@
+@import "tailwindcss";
+
+/* ========================================
+   ELECTROLINK - GLOBAL DESIGN SYSTEM
+======================================== */
+
+:root {
+  /* Brand Colors */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #eff6ff;
+
+  /* Background Colors */
+  --background: #f8fafc;
+  --surface: #ffffff;
+
+  /* Text Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  /* Border */
+  --border: #e2e8f0;
+
+  /* Status Colors */
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+
+  /* Shadows */
+  --shadow-sm:
+    0 1px 2px
+    rgba(15, 23, 42, 0.05);
+
+  --shadow-md:
+    0 4px 6px
+    rgba(15, 23, 42, 0.07),
+    0 2px 4px
+    rgba(15, 23, 42, 0.06);
+
+  --shadow-lg:
+    0 10px 20px
+    rgba(15, 23, 42, 0.1),
+    0 4px 8px
+    rgba(15, 23, 42, 0.06);
+
+  /* Font */
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--text-primary);
+
+  background-color:
+    var(--background);
+
+  font-synthesis: none;
+
+  text-rendering:
+    optimizeLegibility;
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  -moz-osx-font-smoothing:
+    grayscale;
+}
+
+/* ========================================
+   COMPLETE GLOBAL RESET
+======================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing:
+    border-box;
+}
+
+/* ========================================
+   HTML
+======================================== */
+
+html {
+  scroll-behavior:
+    smooth;
+}
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+  min-width:
+    320px;
+
+  min-height:
+    100vh;
+
+  overflow-x:
+    hidden;
+
+  background-color:
+    var(--background);
+
+  color:
+    var(--text-primary);
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height:
+    1.5;
+}
+
+/* ========================================
+   REACT ROOT
+======================================== */
+
+#root {
+  width:
+    100%;
+
+  min-height:
+    100vh;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color:
+    inherit;
+
+  font-family:
+    inherit;
+
+  font-weight:
+    inherit;
+
+  line-height:
+    inherit;
+}
+
+p {
+  margin:
+    0;
+}
+
+/* ========================================
+   LINKS
+======================================== */
+
+a {
+  color:
+    inherit;
+
+  text-decoration:
+    none;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+button,
+input,
+textarea,
+select {
+  font:
+    inherit;
+}
+
+button {
+  border:
+    none;
+
+  background:
+    transparent;
+
+  cursor:
+    pointer;
+}
+
+button:disabled {
+  cursor:
+    not-allowed;
+
+  opacity:
+    0.6;
+}
+
+/* ========================================
+   FORM ELEMENTS
+======================================== */
+
+input,
+textarea,
+select {
+  border:
+    none;
+
+  outline:
+    none;
+}
+
+/* ========================================
+   IMAGES AND MEDIA
+======================================== */
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display:
+    block;
+
+  max-width:
+    100%;
+}
+
+/* ========================================
+   LISTS
+======================================== */
+
+ul,
+ol {
+  list-style:
+    none;
+}
+
+/* ========================================
+   TABLES
+======================================== */
+
+table {
+  width:
+    100%;
+
+  border-collapse:
+    collapse;
+
+  border-spacing:
+    0;
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+:focus-visible {
+  outline:
+    3px solid
+    rgba(37, 99, 235, 0.35);
+
+  outline-offset:
+    3px;
+}
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+  color:
+    #ffffff;
+
+  background-color:
+    var(--primary);
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width:
+    10px;
+
+  height:
+    10px;
+}
+
+::-webkit-scrollbar-track {
+  background:
+    #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  border:
+    2px solid
+    #f1f5f9;
+
+  border-radius:
+    999px;
+
+  background:
+    #94a3b8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    #64748b;
+}
+
+/* ========================================
+   REUSABLE LAYOUT CLASSES
+======================================== */
+
+.page-container {
+  width:
+    100%;
+
+  max-width:
+    1280px;
+
+  margin-inline:
+    auto;
+
+  padding-inline:
+    24px;
+}
+
+.section-spacing {
+  padding-block:
+    80px;
+}
+
+/* ========================================
+   REUSABLE CARD CLASSES
+======================================== */
+
+.card {
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    16px;
+
+  background:
+    var(--surface);
+
+  box-shadow:
+    var(--shadow-sm);
+}
+
+.card-hover {
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card-hover:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    var(--shadow-lg);
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 768px) {
+  .page-container {
+    padding-inline:
+      16px;
+  }
+
+  .section-spacing {
+    padding-block:
+      48px;
+  }
+}
