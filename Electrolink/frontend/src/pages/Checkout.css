@@ -1,0 +1,405 @@
+/* =========================================================
+   CHECKOUT PAGE
+========================================================= */
+
+.checkout-page {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f4f6fa;
+}
+
+.checkout-main {
+  flex: 1;
+
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 28px 46px 56px;
+
+  box-sizing: border-box;
+}
+
+.checkout-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #0757c9;
+
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.checkout-back:hover {
+  text-decoration: underline;
+}
+
+.checkout-heading h1 {
+  margin: 0;
+
+  color: #0f1f38;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.checkout-heading p {
+  margin: 7px 0 22px;
+
+  color: #5b6c85;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.checkout-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  padding: 13px 16px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}
+
+.checkout-alert--error {
+  background: #fef2f2;
+  border: 1px solid #f4c3c3;
+  color: #b91c1c;
+}
+
+.checkout-alert p {
+  margin: 0;
+}
+
+.checkout-alert ul {
+  margin: 8px 0 0;
+
+  padding-left: 18px;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.checkout-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 350px;
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+.checkout-panel,
+.checkout-summary {
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f2;
+  border-radius: 12px;
+}
+
+.checkout-panel h2,
+.checkout-summary h2 {
+  margin: 0 0 20px;
+
+  color: #0f1f38;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.checkout-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.checkout-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.checkout-field--full {
+  grid-column: 1 / -1;
+}
+
+.checkout-field span {
+  color: #26384f;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.checkout-field input,
+.checkout-field select,
+.checkout-field textarea {
+  width: 100%;
+
+  padding: 11px 12px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  border: 1px solid #d5dde7;
+  border-radius: 7px;
+
+  outline: none;
+
+  font-size: 13px;
+  font-family: inherit;
+
+  box-sizing: border-box;
+}
+
+.checkout-field input:focus,
+.checkout-field select:focus,
+.checkout-field textarea:focus {
+  border-color: #0757c9;
+
+  box-shadow: 0 0 0 3px rgba(7, 87, 201, 0.12);
+}
+
+.checkout-field textarea {
+  resize: vertical;
+}
+
+.checkout-field input:disabled,
+.checkout-field select:disabled,
+.checkout-field textarea:disabled {
+  background: #f5f7fa;
+
+  color: #94a3b8;
+}
+
+.checkout-submit {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 18px;
+
+  background: #0757c9;
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 9px;
+
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.checkout-submit:hover:not(:disabled) {
+  background: #0645a3;
+}
+
+.checkout-submit:disabled {
+  background: #cbd5e1;
+
+  cursor: not-allowed;
+}
+
+.checkout-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin: 12px 0 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.checkout-summary {
+  position: sticky;
+  top: 20px;
+}
+
+.checkout-items {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+
+  max-height: 320px;
+
+  overflow-y: auto;
+
+  border-bottom: 1px solid #eef2f8;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.checkout-item-image {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5fb;
+
+  border: 1px solid #e6ebf3;
+  border-radius: 7px;
+
+  color: #94a3b8;
+
+  overflow: hidden;
+}
+
+.checkout-item-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.checkout-item-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.checkout-item-info p {
+  margin: 0;
+
+  color: #0f1f38;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.checkout-item-info span {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.checkout-item-total {
+  color: #0f1f38;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.checkout-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px 0;
+
+  color: #475569;
+
+  font-size: 13px;
+}
+
+.checkout-summary-divider {
+  height: 1px;
+
+  margin: 12px 0;
+
+  background: #eef2f8;
+}
+
+.checkout-summary-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #0f1f38;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.checkout-summary-total strong {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1020px) {
+  .checkout-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .checkout-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .checkout-main {
+    padding: 22px 20px 44px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

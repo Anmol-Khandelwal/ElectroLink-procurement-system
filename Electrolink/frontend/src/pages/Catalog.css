@@ -1,0 +1,557 @@
+/* =========================================================
+   CATALOG PAGE
+========================================================= */
+
+.catalog-page {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f4f6fa;
+}
+
+.catalog-main {
+  flex: 1;
+
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 32px 46px 56px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.catalog-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.catalog-heading h1 {
+  margin: 0;
+
+  color: #0f1f38;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.catalog-heading p {
+  margin: 7px 0 0;
+
+  color: #5b6c85;
+
+  font-size: 14px;
+}
+
+.catalog-cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 42px;
+
+  padding: 0 18px;
+
+  background: #ffffff;
+
+  color: #0757c9;
+
+  border: 1px solid #cfd9e8;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.catalog-cart-link:hover {
+  background: #f2f7ff;
+
+  border-color: #0757c9;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.catalog-alert {
+  margin-bottom: 18px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}
+
+.catalog-alert--error {
+  background: #fef2f2;
+  border: 1px solid #f4c3c3;
+  color: #b91c1c;
+}
+
+.catalog-alert--success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.catalog-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f2;
+  border-radius: 10px;
+}
+
+.catalog-search {
+  flex: 1;
+  min-width: 260px;
+
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+
+  color: #64748b;
+}
+
+.catalog-search input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #172033;
+
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.catalog-select {
+  height: 44px;
+
+  min-width: 172px;
+
+  padding: 0 12px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.catalog-clear-btn {
+  height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 16px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.catalog-clear-btn:hover {
+  border-color: #0757c9;
+  color: #0757c9;
+}
+
+.catalog-count {
+  margin: 18px 0 14px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.catalog-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+
+  gap: 20px;
+}
+
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f2;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.catalog-card:hover {
+  border-color: #c7d8f2;
+
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+
+  transform: translateY(-2px);
+}
+
+.catalog-card-image {
+  height: 168px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5fb;
+
+  color: #94a3b8;
+
+  text-decoration: none;
+}
+
+.catalog-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.catalog-card-body {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px 17px 17px;
+}
+
+.catalog-card-category {
+  color: #0757c9;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.catalog-card-name {
+  margin-top: 7px;
+
+  color: #0f1f38;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+
+  text-decoration: none;
+}
+
+.catalog-card-name:hover {
+  color: #0757c9;
+}
+
+.catalog-card-meta {
+  margin: 7px 0 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.catalog-card-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+.catalog-card-price {
+  color: #0f1f38;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.catalog-card-stock {
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.catalog-card-stock--in {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.catalog-card-stock--low {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.catalog-card-stock--out {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.catalog-card-moq {
+  margin: 9px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.catalog-card-incart {
+  margin: 8px 0 0;
+
+  color: #047857;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.catalog-card-actions {
+  display: flex;
+
+  gap: 9px;
+
+  margin-top: auto;
+
+  padding-top: 15px;
+}
+
+.catalog-add-btn {
+  flex: 1;
+
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #0757c9;
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.catalog-add-btn:hover:not(:disabled) {
+  background: #0645a3;
+}
+
+.catalog-add-btn:disabled {
+  background: #cbd5e1;
+
+  cursor: not-allowed;
+}
+
+.catalog-details-btn {
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 15px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.catalog-details-btn:hover {
+  border-color: #0757c9;
+  color: #0757c9;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.catalog-empty {
+  padding: 70px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f2;
+  border-radius: 12px;
+
+  color: #94a3b8;
+
+  text-align: center;
+}
+
+.catalog-empty h2 {
+  margin: 8px 0 0;
+
+  color: #0f1f38;
+
+  font-size: 19px;
+}
+
+.catalog-empty p {
+  margin: 0;
+
+  max-width: 430px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.catalog-empty-btn {
+  margin-top: 8px;
+
+  height: 40px;
+
+  padding: 0 20px;
+
+  background: #0757c9;
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   LOADING SKELETON
+========================================================= */
+
+.catalog-card--skeleton {
+  padding-bottom: 18px;
+
+  pointer-events: none;
+}
+
+.catalog-card--skeleton .catalog-card-image {
+  background: #eef2f8;
+}
+
+.catalog-skeleton-line {
+  height: 13px;
+
+  margin: 14px 17px 0;
+
+  background: #eef2f8;
+  border-radius: 6px;
+}
+
+.catalog-skeleton-line--short {
+  width: 55%;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .catalog-main {
+    padding: 24px 20px 44px;
+  }
+
+  .catalog-select {
+    flex: 1;
+    min-width: 140px;
+  }
+}

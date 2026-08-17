@@ -1,0 +1,73 @@
+/* =========================================================
+   ELECTROLINK FOOTER
+========================================================= */
+
+.el-footer {
+  width: 100%;
+
+  padding: 26px 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  background: #0d1b2f;
+
+  color: #c6d2e2;
+
+  box-sizing: border-box;
+}
+
+.el-footer-logo {
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.el-footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 26px;
+}
+
+.el-footer-links a {
+  color: #c6d2e2;
+
+  font-size: 13px;
+
+  text-decoration: none;
+}
+
+.el-footer-links a:hover {
+  color: #ffffff;
+
+  text-decoration: underline;
+}
+
+.el-footer-copy {
+  color: #8d9db5;
+
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .el-footer {
+    flex-direction: column;
+
+    padding: 22px 20px;
+
+    text-align: center;
+  }
+
+  .el-footer-links {
+    justify-content: center;
+
+    gap: 16px;
+  }
+}
