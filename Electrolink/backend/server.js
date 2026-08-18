@@ -41,12 +41,16 @@ if (!JWT_SECRET) {
    MIDDLEWARE
 ========================================================= */
 
-const ALLOWED_ORIGINS = (
-  process.env.CLIENT_URL || "http://localhost:5173,http://localhost:5174"
-)
-  .split(",")
-  .map((origin) => origin.trim())
-  .filter(Boolean);
+const ALLOWED_ORIGINS = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:3000",
+  "https://electro-link-procurement-system-i5lp.vercel.app",
+  "https://electro-link-procurement-system.vercel.app",
+  ...(process.env.CLIENT_URL
+    ? process.env.CLIENT_URL.split(",").map((origin) => origin.trim())
+    : []),
+].filter(Boolean);
 
 app.use(
   cors({
